@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENQUIRE</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!-- Navigation links to other pages -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Send Us an Enquiry</h2>
+    <form id="enquire-form" novalidate autocomplete="on" aria-describedby="form-instructions">
+      <p id="form-instructions" class="sr-only">Required fields are marked with an asterisk *</p>
+      <label for="enq-name">Full Name *</label>
+      <input type="text" id="enq-name" name="name" autocomplete="name" placeholder="Your full name" required aria-required="true" aria-describedby="enq-name-error" />
+      <div class="error-message" id="enq-name-error" aria-live="polite"></div>
+
+
+      <label for="enq-email">Email Address *</label>
+      <input type="email" id="enq-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" aria-describedby="enq-email-error" />
+      <div class="error-message" id="enq-email-error" aria-live="polite"></div>
+
+      <label for="enq-phone">Phone Number</label>
+      <input type="tel" id="enq-phone" name="phone" autocomplete="tel" placeholder="+1 555 555 5555" aria-describedby="enq-phone-error" />
+      <div class="error-message" id="enq-phone-error" aria-live="polite"></div>
+
+      <label for="enq-subject">Subject *</label>
+      <input type="text" id="enq-subject" name="subject" placeholder="Enquiry subject" required aria-required="true" aria-describedby="enq-subject-error" />
+      <div class="error-message" id="enq-subject-error" aria-live="polite"></div>
+
+      <label for="enq-message">Message *</label>
+      <textarea id="enq-message" name="message" placeholder="Write your message here..." required aria-required="true" aria-describedby="enq-message-error"></textarea>
+      <div class="error-message" id="enq-message-error" aria-live="polite"></div>
+      
+      <button type="submit" aria-label="Submit enquiry form">Send Enquiry</button>
+    </form>
+  </div>
+  <div id="notification" class="notification" role="alert" aria-live="assertive" aria-atomic="true">
+    <span class="material-icons" id="notification-icon">check_circle</span>
+    <span id="notification-message"></span>
+  </div>
+     
+    <footer>
+        <p>[2019] Magg Creative Photography. All rights reserved</p>
+        
+    </footer>  
+</body>
+</html>
