@@ -39,6 +39,29 @@
       <input type="tel" id="enq-phone" name="phone" autocomplete="tel" placeholder="+1 555 555 5555" aria-describedby="enq-phone-error" />
       <div class="error-message" id="enq-phone-error" aria-live="polite"></div>
 
+
+      <div class="datetime-row">
+        <div class="datetime-col">
+          <label for="enq-date">Preferred Date *</label>
+          <input type="date" id="enq-date" name="date" required min="">
+          <div class="error-message" id="date-error"></div>
+        </div>
+        <div class="datetime-col">
+          <label for="enq-time">Preferred Time *</label>
+          <input type="time" id="enq-time" name="time" required min="09:00" max="18:00" step="900">
+          <div class="error-message" id="time-error"></div>
+        </div>
+      </div>
+      <label for="enq-service">Service Interested In *</label>
+      <select id="enq-service" name="service" required>
+        <option value="" disabled selected>Select a service</option>
+        <option value="portrait">Portrait Photography</option>
+        <option value="event">Event Photography</option>
+        <option value="model">Model Shoot</option>
+        <option value="product">Personal Shoot</option>
+      </select>
+      <div class="error-message" id="service-error"></div>
+
       <label for="enq-subject">Subject *</label>
       <input type="text" id="enq-subject" name="subject" placeholder="Enquiry subject" required aria-required="true" aria-describedby="enq-subject-error" />
       <div class="error-message" id="enq-subject-error" aria-live="polite"></div>
