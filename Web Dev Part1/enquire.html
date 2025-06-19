@@ -36,25 +36,25 @@
       <div class="error-message" id="enq-email-error" aria-live="polite"></div>
 
       <label for="enq-phone">Phone Number</label>
-      <input type="tel" id="enq-phone" name="phone" autocomplete="tel" placeholder="+1 555 555 5555" aria-describedby="enq-phone-error" />
+      <input type="tel" id="enq-phone" name="phone" autocomplete="tel" placeholder="+27 555 555 555" aria-describedby="enq-phone-error" />
       <div class="error-message" id="enq-phone-error" aria-live="polite"></div>
 
-
+      <!--date and time-->
       <div class="datetime-row">
         <div class="datetime-col">
-          <label for="enq-date">Preferred Date *</label>
+          <label for="enq-date">Preferred Date *</label>    <!--selection of date-->
           <input type="date" id="enq-date" name="date" required min="">
           <div class="error-message" id="date-error"></div>
         </div>
         <div class="datetime-col">
-          <label for="enq-time">Preferred Time *</label>
+          <label for="enq-time">Preferred Time *</label> <!--selection of time-->
           <input type="time" id="enq-time" name="time" required min="09:00" max="18:00" step="900">
           <div class="error-message" id="time-error"></div>
         </div>
       </div>
       <label for="enq-service">Service Interested In *</label>
       <select id="enq-service" name="service" required>
-        <option value="" disabled selected>Select a service</option>
+        <option value="" disabled selected>Select a service</option>    <!--offered services-->
         <option value="portrait">Portrait Photography</option>
         <option value="event">Event Photography</option>
         <option value="model">Model Shoot</option>
@@ -81,6 +81,28 @@
     <footer>
         <p>[2019] Magg Creative Photography. All rights reserved</p>
         
-    </footer>  
+    </footer> 
+    <style>
+      .determine-row{
+        display: flex;
+        gap: 20px;
+
+      }
+      .datetime-col{
+        flex: 1;
+
+      }
+
+    .error-message{
+      color: #ef5350;
+      font-size: 0,875rem;
+      margin-top: -12px;
+      padding-left: 6px;
+      min-height: 18px;
+    }
+    </style>
+      
+    
+
 </body>
 </html>
